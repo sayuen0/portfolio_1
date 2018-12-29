@@ -1,0 +1,215 @@
+/*reset */
+body {
+  margin: 0;
+}
+
+/* global */
+
+
+/* nav */
+
+$link_hover : yellowgreen;
+
+nav {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(45deg, red, blue);
+  display: flex;
+  align-items: center;
+  text-shadow: 2px 2px 2px black;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // z-index: 100;
+
+  p {
+    margin-left: 20px;
+    font-family: "arial black";
+    font-size: 2.5rem;
+
+    a {
+      display: block;
+      width: 500px;
+
+      &:hover {
+        color: $link_hover;
+        text-shadow: 5px 5px 5px black;
+
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 20px 0 auto;
+  }
+
+  li {
+    list-style: none;
+    margin-left: 20px;
+    line-height: 100px;
+
+
+    a {
+      display: inline-block;
+
+      &:hover {
+        color: $link_hover;
+        text-shadow: 5px 5px 5px black;
+
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+
+
+  }
+
+}
+
+
+
+/* header */
+
+.movie {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+
+  // 動画用
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/* main */
+
+main {
+  margin: 30px 0;
+}
+
+.logo_h {
+  text-align: center;
+  font-size: 3rem;
+  position: relative;
+  padding: 0 0 10px 0;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 4px;
+    margin-left: -50px;
+    background-color: #d65050;
+  }
+
+
+
+}
+
+.profiles_container {
+  margin: 20px 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+
+
+}
+
+
+.profile_wrapper {
+  width: 25%;
+  text-align: center;
+  flex: 0 0 30%;
+  margin-bottom: 40px;
+
+  img {
+    border-radius: 10px;
+  }
+
+  &:nth-child(2n+1) {
+    background-color: rgba($color: skyblue, $alpha: 0.5);
+
+  }
+
+  .name {
+    color: red;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+a.link {
+  display: block;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+
+  div {
+    line-height: 50px;
+    width: 100%;
+    height: 100%;
+    background-color: limegreen;
+    color: white;
+    font-family: "Gamja Flower", cursive;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: green;
+    }
+  }
+
+}
+
+
+
+/* footer */
+
+footer {
+  width: 100%;
+  height: 120px;
+  line-height: 120px;
+  background: linear-gradient(45deg, skyblue, limegreen);
+  text-align: center;
+  color: white;
+
+  strong {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
+
+  a {
+    width: 30px;
+    height: 30px;
+    background-color: mediumslateblue;
+    position: fixed;
+    right: 20px;
+    color: white;
+    bottom: 20px;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+}
