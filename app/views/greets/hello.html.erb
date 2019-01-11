@@ -1,71 +1,36 @@
-<!DOCTYPE html>
-<html lang="ja">
+<header>
+  <%# <div class="movie">
+    <iframe id="movie_frame" src="https://www.youtube.com/embed/RwCl11tyWP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dammy Site</title>
-</head>
+  </div> %>
+  <% @movie_id ="RwCl11tyWP0" %>
+  <div class="movie">
+    <iframe id="movie_frame" src="https://www.youtube.com/embed/RwCl11tyWP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</header>
 
-<body>
-  <nav id="top">
-    <p><a href="./hello.html.erb">Logo</a></p>
-    <ul>
-      <li><a href="./member.html">MEMBER</a></li>
-      <li><a href="./news.html">NEWS</a></li>
-      <li><a href="./contact.html">CONTACT</a></li>
-      <li><a href="./company.html">COMPANY</a></li>
-      <li><a href="./form.html">FORM</a></li>
-
-    </ul>
-  </nav>
-  <header>
-    <div class="movie">
-      <iframe id="movie_frame" src="https://www.youtube.com/embed/RwCl11tyWP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-
+<main id="member">
+  <h2 class="logo_h" id="member_logo">
+    MEMBER
+  </h2>
+  <div class="profiles_container">
+    <% @members_length = 3 %>
+    <% @members_length.times do |i| %>
+    <div class="profile_wrapper">
+      <%= image_tag "members/profile.jpg", alt: "Member_C"%>
+      <p class="name">Name</p>
+      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt
+        ut
+        labore et dolore magna aliqua. </p>
     </div>
-  </header>
+    <% end %>
 
-  <main id="member">
-    <h2 class="logo_h" id="member_logo">
-      MEMBER
-    </h2>
-    <div class="profiles_container">
-      <div class="profile_wrapper">
-        <img src="/profile.jpg" alt="Member_C">
-        <p class="name">Name</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt
-          ut
-          labore et dolore magna aliqua. </p>
-      </div>
-      <div class="profile_wrapper">
-        <img src="/profile.jpg" alt="Member_C">
-        <p class="name">Name</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt
-          ut
-          labore et dolore magna aliqua.</p>
-      </div>
-      <div class="profile_wrapper">
-        <img src="/profile.jpg" alt="Member_C">
-        <p class="name">Name</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt
-          ut
-          labore et dolore magna aliqua.</p>
-      </div>
-    </div>
-    <a class="link" href="./member.html">
-      <div>メンバー一覧を見る</div>
-    </a>
-  </main>
-  <footer>
-    <a href="#top">&uArr;</a>
-    <strong>&copy;2018Torimai.net</strong>
-  </footer>
-</body>
+  </div>
 
-</html>
+  <% link_button_div = content_tag("div","メンバー一覧を見る") %>
+  <%= link_to link_button_div, "/members" , class: "link" %>
+
+</main>

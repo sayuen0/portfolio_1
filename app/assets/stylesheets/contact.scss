@@ -1,0 +1,59 @@
+// main
+
+body.contact_back {
+  background-image: url(../img/back_water_surface.jpg);
+  background-size: cover;
+
+}
+
+main {
+  min-height: 700px;
+
+  .contact_heading {
+    text-align: center;
+    color: gray;
+    font-size: 2.5rem;
+    font-family: sans-serif;
+  }
+
+  .questions_list {
+    list-style: none;
+  }
+
+  .contact_mask {
+    height: 100%;
+    background: rgba($color:white, $alpha:0.4);
+  }
+}
+
+
+
+
+ul.questions_list {
+  display: block;
+  margin: 20px 50px;
+
+  li {
+    font-weight: bold;
+
+    .question_body {
+      color: deeppink;
+
+      &:before {
+        content: "Q.  ";
+        position: relative;
+        left: -1em;
+      }
+    }
+
+    .answer_body {
+      color: black;
+
+      &:before {
+        content: "A.  ";
+        position: relative;
+        left: -0.5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+// main
+
+
+
+body.company_back {
+  background-color: rgba($color:gold, $alpha:0.4);
+}
+
+logo_h {
+  span.sub_span {
+    font-size: 15px;
+  }
+}
+
+table {
+  margin: auto;
+  text-align: center;
+
+
+
+  td {
+    min-height: 80px;
+    vertical-align: middle;
+    padding: 20px 50px;
+  }
+
+  th {
+    width: 400px;
+    border-bottom: 1px solid black;
+  }
+
+  td {
+    width: 600px;
+    border-bottom: 1px solid gray;
+  }
+}

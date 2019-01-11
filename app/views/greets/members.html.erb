@@ -1,0 +1,20 @@
+<% @page_title = "メンバー"%>
+<main id="member">
+  <h2 class="logo_h" id="member_logo">
+    MEMBER
+  </h2>
+  <div class="profiles_container">
+    <% members_length = 20%>
+    <% members_length.times do |i| %>
+    <%# 各ユーザーアイテムの配置 %>
+    <div class="profile_wrapper">
+      <%= image_tag "members/profile.jpg", alt: "Member_C"%>
+      <p class="name name_blue">Name</p>
+      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt
+        ut
+        labore et dolore magna aliqua.</p>
+    </div>
+    <% end %>
+  </div>
+</main>

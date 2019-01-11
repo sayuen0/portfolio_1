@@ -1,0 +1,25 @@
+<% @page_title ="お知らせ"%>
+
+<main>
+  <h2 class="logo_h">NEWS</h2>
+  <div class="back">
+    <div class="back_mask">
+      <ul class="news_list">
+        <% news_length = 10%>
+        <% news_length.times do |i|%>
+        <li class="news_item">
+          <%= image_tag "news/news_icon.jpg" ,alt: "news_icon" , class: "news_image"%>
+          <p class="news_message">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+            eget
+            dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+            quam felis,
+            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+            fringilla vel,
+          </p>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</main>
