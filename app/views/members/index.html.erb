@@ -1,0 +1,18 @@
+<% @page_title = "メンバー一覧"%>
+<main id="member">
+  <h2 class="logo_h" id="member_logo">
+    MEMBER
+  </h2>
+  <div class="profiles_container">
+    <% @members.each do |member| %>
+    <%# 各ユーザーアイテムの配置 %>
+    <div class="profile_wrapper">
+      <%= image_tag "members/profile.jpg", alt: "Member_C"%>
+      <%= link_to  member.name , member %>
+      <p class="description">
+        <%= member.introduction %>
+      </p>
+    </div>
+    <% end %>
+  </div>
+</main>

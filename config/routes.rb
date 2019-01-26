@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root "greets#hello"
   get '/news' => "greets#news"
   get '/contact' => "greets#contact"
-  get '/members' => "greets#members"
   get '/company' => "greets#company"
   get '/form' => "greets#form"
 
+  resources :members
 end
