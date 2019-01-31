@@ -20,7 +20,17 @@
 
   </div>
   <% end %>
-  <%= yield %>
+  <div class="container">
+    <div class="row">
+      <aside class="col-12 col-md-2 offset-md-1">
+        <%= render "shared/aside"%>
+      </aside>
+
+      <div class="col-12 col-md-8">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
   <%= render "/shared/footer"%>
 </body>
 

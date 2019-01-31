@@ -1,4 +1,4 @@
-<% @page_title = @member.name+"さんのプロフィール"%>
+<% @page_title = @member.name+" さんのプロフィール"%>
 <h1>
   <%= @page_title%>
 </h1>
@@ -13,7 +13,7 @@
     <th>画像</th>
     <td>
       <div>
-        ここに画像追加予定
+        <%=  @member.picture ? "nil": @member.picture%>
       </div>
     </td>
   </tr>
@@ -21,6 +21,12 @@
     <th>紹介</th>
     <td>
       <%= @member.introduction%>
+    </td>
+  </tr>
+  <tr>
+    <th>年齢</th>
+    <td>
+      <%= "#{@member.age}才"%>
     </td>
   </tr>
 </table>

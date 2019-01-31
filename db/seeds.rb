@@ -8,10 +8,17 @@
 
 
 # MEMBERS
-30.times do |idx|
+20.times do |idx|
   Member.create(
     name: "#{idx}name",
-    introduction: "a"*140)
+    introduction: "a"*140,
+    age: 10+idx,
+    hometown:Faker::Address.state,
+    birthday: Time.now,
+    catchphrase: "aal izz well",
+    motto:"継続は力なり",
+    bestdish:Faker::Food.dish
+    )
 end
 
 

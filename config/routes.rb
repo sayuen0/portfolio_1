@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root "greets#hello"
   get '/news' => "greets#news"
   get '/contact' => "greets#contact"
-  get '/company' => "greets#company"
+  get "/company" => "greets#company"
   get '/form' => "greets#form"
 
   resources :members

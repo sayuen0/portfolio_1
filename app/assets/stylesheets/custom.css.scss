@@ -148,14 +148,10 @@ footer {
     line-height: normal;
   }
 
-  a {
+  a.btn {
     position: fixed;
     right: 20px;
-    color: white;
     bottom: 20px;
 
-    &:hover {
-      background-color: red;
-    }
   }
 }
