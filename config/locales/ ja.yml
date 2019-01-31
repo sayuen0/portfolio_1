@@ -1,6 +1,8 @@
 ja:
   activerecord:
+    models:
+      member: 会員情報
     attributes:
-      members:
+      member:
         name: "名前"
         introduction: "自己紹介"

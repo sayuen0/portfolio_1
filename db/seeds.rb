@@ -6,8 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do |idx|
+
+# MEMBERS
+30.times do |idx|
   Member.create(
     name: "#{idx}name",
     introduction: "a"*140)
+end
+
+
+
+#QUESTIONS
+bodies = ["お友達に半身浴を薦められ、やってみましたがうまく行きません。
+鼻や耳にお湯が入ってしまいます。
+右半身ですか？左半身ですか？
+困っています。", "バカは風邪ひかないって本当なんですか？"]
+answers = ["下半身です。
+左右ではありません。
+みぞおちの下辺りまでお湯につかれればＯＫです。","馬鹿は風邪ひかないというより風邪をひいたことに気づかないです。"]
+
+2.times do |idx|
+  Question.create(
+    body: bodies[idx],
+    answer: answers[idx]
+    )
 end

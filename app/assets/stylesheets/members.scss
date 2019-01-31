@@ -1,3 +1,88 @@
 // Place all the styles related to the members controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.profiles_container {
+
+  margin: 20px 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+
+}
+
+
+.profile_wrapper {
+  text-align: center;
+  width: 30%;
+  word-wrap: break-word;
+  text-decoration: none;
+
+
+
+
+  img {
+    border-radius: 10px;
+  }
+
+  &:nth-child(2n+1) {
+    background-color: rgba($color: skyblue, $alpha: 0.5);
+
+  }
+
+  .name {
+    color: red;
+  }
+
+  p.description {
+    text-decoration: none;
+  }
+
+
+}
+
+@media(max-width: 764px) {
+  .profile_wrapper {
+    width: 90%;
+  }
+}
+
+
+img {
+  width: 100%;
+}
+
+a.link {
+  display: block;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+
+  div {
+    line-height: 50px;
+    width: 100%;
+    height: 100%;
+    background-color: limegreen;
+    color: white;
+    font-family: "Gamja Flower", cursive;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: green;
+    }
+  }
+}
+
+
+.attr-links {
+  text-align: center;
+}
+
+
+table td {
+  word-break: break-all;
+}

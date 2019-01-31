@@ -7,13 +7,13 @@
     <% if @members %>
     <% @members.each do |member| %>
     <%# 各ユーザーアイテムの配置 %>
-    <div class="profile_wrapper ">
-      <%= image_tag "members/profile.jpg", alt: "Member_C"%>
-      <%= link_to  member.name , member %>
-      <p class="description">
-        <%= member.introduction %>
-      </p>
-    </div>
+    <%= link_to(member, class:"profile_wrapper") do %>
+    <%= image_tag "members/profile.jpg", alt: "Member_C"%>
+    <%= member.name %>
+    <p class="description">
+      <%= member.introduction.truncate(24) %>
+    </p>
+    <% end %>
     <% end %>
     <% else %>
     <p>該当メンバーがいません</p>

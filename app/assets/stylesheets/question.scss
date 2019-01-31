@@ -35,9 +35,11 @@ ul.questions_list {
 
   li {
     font-weight: bold;
+    margin-bottom: 30px;
 
     .question_body {
       color: deeppink;
+      font-size: 1.2em;
 
       &:before {
         content: "Q.  ";

@@ -22,8 +22,10 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
-
 gem 'carrierwave'
+
+gem 'email_validator', '~>1.6'
+gem 'rails-i18n', '~>5.1'
 
 gem 'rb-readline'
 # Use CoffeeScript for .coffee assets and views
