@@ -1,22 +1,30 @@
-<header>
-  <nav class="nav navbar-nav" id="top">
-    <p>
-      <%= link_to "Logo", :root %>
-    </p>
-    <ul>
-      <li>
-        <%= link_to "MEMBER", :members%>
+<nav class="navbar navbar-expand-lg navbar-light bg-info" id="top">
+  <p>
+    <%= link_to "Logo", :root %>
+  </p>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse bg-info"  id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <%= link_to "MEMBER", :members ,class: ""%>
       </li>
-
-      <li>
-        <%= link_to "NEWS", :news%>
+      <li class="">
+        <%= link_to "NEWS", :news ,class: ""%>
       </li>
-      <li>
-        <%= link_to "CONTACT", :contact%>
+      <li class="nav-item">
+        <a class="" href="./company.html">CONTACT</a>
       </li>
-      <li><a href="./company.html">COMPANY</a></li>
-      <li><a href="./form.html">FORM</a></li>
-
+      <li class="nav-item">
+        <a class="" href="./contact.html">COMPANY</a>
+      </li>
+      <li class="nav-item">
+        <a class="" href="./form.html">FORM</a>
+      </li>
     </ul>
-  </nav>
-</header>
+  </div>
+</nav>
+
+

@@ -15,7 +15,7 @@ table#table_form {
   }
 }
 
-th {
+th.form-header {
   &:after {
     content: "必須";
     color: red;

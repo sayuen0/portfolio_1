@@ -1,6 +1,7 @@
 class GreetsController < ApplicationController
 
   def hello
+    @members = Member.order(:id).limit(3)
   end
 
   def members

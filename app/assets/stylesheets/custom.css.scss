@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 /*reset */
 body {
   margin: 0;
@@ -12,12 +14,11 @@ body {
 $link_hover : yellowgreen;
 
 nav {
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(45deg, red, blue);
+  z-index: 100;
   display: flex;
   align-items: center;
   text-shadow: 2px 2px 2px black;
+
 
   p {
     margin-left: 20px;
@@ -26,7 +27,7 @@ nav {
 
     a {
       display: block;
-      width: 500px;
+      width: 200px;
 
       &:hover {
         color: $link_hover;
@@ -49,7 +50,6 @@ nav {
 
 
     a {
-      display: inline-block;
 
       &:hover {
         color: $link_hover;
@@ -89,6 +89,12 @@ nav {
   }
 }
 
+/*通知部分*/
+.flash-notion {
+  text-align: center;
+  color: red;
+  font-size: 1.5;
+}
 
 /* main */
 
@@ -96,24 +102,31 @@ main {
   margin: 30px 0;
 }
 
+
+// ロゴ
 .logo_h {
   text-align: center;
   font-size: 3rem;
   position: relative;
   padding: 0 0 10px 0;
+  font-style: italic;
+
+
+  &::first-letter {
+    font-size: 4rem;
+    color: darkorange;
+  }
 
   &:before {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 10px;
     width: 100px;
     height: 4px;
     margin-left: -50px;
     background-color: #d65050;
   }
-
-
 
 }
 
@@ -123,16 +136,14 @@ main {
   flex-flow: row wrap;
   justify-content: space-around;
 
-
-
 }
 
 
 .profile_wrapper {
-  width: 25%;
   text-align: center;
-  flex: 0 0 30%;
-  margin-bottom: 40px;
+  width: 30%;
+  word-wrap: break-word;
+
 
   img {
     border-radius: 10px;
@@ -147,6 +158,13 @@ main {
     color: red;
   }
 }
+
+@media(max-width: 764px) {
+  .profile_wrapper {
+    width: 90%;
+  }
+}
+
 
 img {
   width: 100%;
@@ -197,9 +215,6 @@ footer {
   }
 
   a {
-    width: 30px;
-    height: 30px;
-    background-color: mediumslateblue;
     position: fixed;
     right: 20px;
     color: white;
