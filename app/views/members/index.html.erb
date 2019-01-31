@@ -1,12 +1,13 @@
 <% @page_title = "メンバー一覧"%>
 <main id="member">
-  <h2 class="logo_h" id="member_logo">
+  <h2 class="logo_h">
     MEMBER
   </h2>
-  <div class="profiles_container">
+  <div class="profiles_container ">
+    <% if @members %>
     <% @members.each do |member| %>
     <%# 各ユーザーアイテムの配置 %>
-    <div class="profile_wrapper">
+    <div class="profile_wrapper ">
       <%= image_tag "members/profile.jpg", alt: "Member_C"%>
       <%= link_to  member.name , member %>
       <p class="description">
@@ -14,5 +15,11 @@
       </p>
     </div>
     <% end %>
+    <% else %>
+    <p>該当メンバーがいません</p>
+    <% end %>
   </div>
+
+  <% link_button_div = content_tag("div","メンバーを新規作成する") %>
+  <%= link_to link_button_div, :new_member , class: "link" %>
 </main>

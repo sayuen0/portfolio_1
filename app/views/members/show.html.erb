@@ -1,2 +1,22 @@
-<h1>Members#show</h1>
-<p>Find me in app/views/members/show.html.erb</p>
+<table>
+  <tr>
+    <th>名前</th>
+    <td>
+      <%=@member.name%>
+    </td>
+  </tr>
+  <tr>
+    <th>画像</th>
+    <td>
+      <div>
+        ここに画像追加予定
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>紹介</th>
+    <td>
+      <%= @member.introduction%>
+    </td>
+  </tr>
+</table>

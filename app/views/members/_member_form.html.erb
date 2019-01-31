@@ -1,0 +1,28 @@
+<h1 class="logo_h">
+  <%= @page_title%>
+</h1>
+<%= form_with model: @member ,url: members_path,method: :post do |form| %>
+<table>
+  <tr>
+    <th>
+      <%= form.label :name %>
+    </th>
+    <td>
+      <%= form.text_field :name %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <%= form.label :introduction%>
+    </th>
+    <td>
+      <%= form.text_field :introduction%>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <%=form.submit "新規ユーザーを登録する" %>
+    </td>
+  </tr>
+</table>
+<% end %>

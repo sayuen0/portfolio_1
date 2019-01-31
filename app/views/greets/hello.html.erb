@@ -4,11 +4,6 @@
       allowfullscreen></iframe>
 
   </div> %>
-  <% @movie_id ="RwCl11tyWP0" %>
-  <div class="movie">
-    <iframe id="movie_frame" src="https://www.youtube.com/embed/RwCl11tyWP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
 </header>
 
 <main id="member">
@@ -16,21 +11,18 @@
     MEMBER
   </h2>
   <div class="profiles_container">
-    <% @members_length = 3 %>
-    <% @members_length.times do |i| %>
+    <% @members.each do |member| %>
     <div class="profile_wrapper">
       <%= image_tag "members/profile.jpg", alt: "Member_C"%>
-      <p class="name">Name</p>
-      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-        incididunt
-        ut
-        labore et dolore magna aliqua. </p>
+      <%= link_to member.name, member%>
+      <p class="description">
+        <%= member.introduction%>
+      </p>
     </div>
     <% end %>
-
   </div>
 
   <% link_button_div = content_tag("div","メンバー一覧を見る") %>
-  <%= link_to link_button_div, "/members" , class: "link" %>
+  <%= link_to link_button_div, :members , class: "link" %>
 
 </main>
