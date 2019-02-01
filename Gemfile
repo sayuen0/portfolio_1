@@ -28,7 +28,7 @@ gem 'carrierwave'
 gem 'email_validator', '~>1.6'
 gem 'rails-i18n', '~>5.1'
 
-gem  'kaminari'
+gem 'kaminari', '~> 0.17.0'
 gem 'rb-readline'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -39,8 +39,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
+gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

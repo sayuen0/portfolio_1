@@ -20,10 +20,15 @@
     </td>
   </tr>
   <tr>
+    <th><%= form.label :birthday %></th>
+    <td><%== sprintf(
+                 form.date_select(:birthday, :use_month_numbers=>true, :date_separator => '%s', :start_year=>1930, :end_year => Time.now.year, :default =>'1990-1-1'.to_date), '年','月') + '日生まれ' %></td>
+  </tr>
+  <tr>
     <td colspan="2">
       <%=form.submit @submit_body %>
     </td>
   </tr>
-</table>
+ </table>
 
 <% end %>

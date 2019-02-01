@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-info" id="top">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-info" >
   <p>
     <%= link_to "Logo", :root %>
   </p>
@@ -9,19 +9,19 @@
   <div class="collapse navbar-collapse bg-info" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <%= link_to "MEMBER", :members ,class: ""%>
+        <%= link_to "MEMBER", :members ,class: "nav-link"%>
       </li>
       <li class="">
-        <%= link_to "NEWS", :news ,class: ""%>
+        <%= link_to "NEWS", :news ,class: "nav-link"%>
       </li>
       <li class="nav-item">
-        <%= link_to "Q&A", :questions %>
+        <%= link_to "Q&A", :questions ,class: "nav-link"%>
       </li>
       <li class="nav-item">
-        <%= link_to "COMPANY", "/company"%>
+        <%= link_to "COMPANY", "/company", class:"nav-link"%>
       </li>
       <li class="nav-item">
-    <%= link_to "FORM", "/form"%>
+    <%= link_to "FORM", "/form" , class:"nav-link"%>
       </li>
     </ul>
   </div>

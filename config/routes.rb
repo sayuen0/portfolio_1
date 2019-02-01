@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   resources :members
   resources :questions,:only => [:index, :show]
+  resource :session, only: [:create, :destroy]
 end

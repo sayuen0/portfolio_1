@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_31_110129) do
+ActiveRecord::Schema.define(version: 2019_01_31_153455) do
 
   create_table "articles", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 2019_01_31_110129) do
     t.string "catchphrase"
     t.string "motto"
     t.string "bestdish"
+    t.string "email"
+    t.string "password_digest"
   end
 
   create_table "questions", force: :cascade do |t|

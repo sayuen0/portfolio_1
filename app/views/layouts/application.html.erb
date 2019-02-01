@@ -16,7 +16,7 @@
   <%= render "/shared/header"%>
   <% if !flash.empty? %>
   <div class="flash-notion">
-    <%= flash[:notion]%>
+    <%= flash.now[:notice]%>
 
   </div>
   <% end %>

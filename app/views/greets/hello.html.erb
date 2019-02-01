@@ -23,6 +23,8 @@
     <% end %>
   </div>
 
+  <%= paginate @members %>
+
   <% link_button_div = content_tag("div","メンバー一覧を見る") %>
   <%= link_to link_button_div, :members , class: "link" %>
 

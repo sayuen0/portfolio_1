@@ -1,8 +1,10 @@
 class GreetsController < ApplicationController
+  PER=8
 
   def hello
-    @members = Member.order(:id).limit(3)
+    @members = Member.page(params[:page]).per(PER)
   end
+
 
   def members
   end

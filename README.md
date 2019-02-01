@@ -1,35 +1,26 @@
-# README
+# Rails Portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 環境構築方法
+- 手元にクローン
 
-Things you may want to cover:
+ ```$ git clone https://github.com/sayuen0/portfolio_1.git```
 
-- Ruby version
+- gemをインストール
 
-- System dependencies
+``` $ bundle install ```
 
-- Configuration
+- ローカルで実行
 
-- Database creation
+``` $ rails s ```
 
-- Database initialization
+- ブラウザで表示
+[localhost:3000](http://localhost:3000/)
 
-- How to run the test suite
 
-- Services (job queues, cache servers, search engines, etc.)
+## 主な技術領域
+- Bootstrap4
+- jQuery
+- Sass
 
-- Deployment instructions
 
-- ...
-
-TODOS
-
-- member モデルの追加
-- news モデルの追加
-- member/:id ページ作成
-- form の table 修正
-- ヘッダーの充実
-  - スティッキーヘッダー実装
-  - 現在いるページのリンクはスタイル変更
-- boot でレスポンシブ化
+##

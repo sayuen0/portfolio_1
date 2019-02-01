@@ -19,12 +19,12 @@
   text-decoration: none;
 
 
-
+$image_size : 120px;
 
   img {
     border-radius: 10px;
-    width: 100px;
-    height: 100px;
+    width: $image_size;
+    height: $image_size;
   }
 
   &:nth-child(2n+1) {
@@ -85,6 +85,24 @@ a.link {
 }
 
 
+
 table td {
   word-break: break-all;
+}
+
+
+//メンバー用ページネーション
+nav.pagination{
+  font-size: 1.6em;
+  color:aqua;
+  box-sizing: border-box;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+
+  a{
+    margin: 0 3px;
+    border : 1px solid gray;
+  }
 }

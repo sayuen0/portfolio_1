@@ -1,6 +1,7 @@
 class MembersController < ApplicationController
+  PER = 9
   def index
-    @members = Member.all
+    @members = Member.order(:created_at).page(params[:page]).per(PER)
   end
 
   def show
@@ -42,18 +43,21 @@ class MembersController < ApplicationController
     # binding.pry
     if member.save
       redirect_to :member
-      flash[:notion] = 'メンバー情報の更新に成功しました。'
+      # binding.pry
+      # flash[:notion] = 'メンバー情報の更新に成功しました。'
+      flash.now[:notice] ='メンバー情報の更新に成功しました'
     else
-      @member.attributes = member_params
+      @member.attributes  = member_params
       render :edit
-      flash[:notion]= 'メンバー情報の更新に失敗しました。'
+      flash[:notice]= 'メンバー情報の更新に失敗しました。'
     end
+    # binding.pry
   end
 
 
   private
     def member_params
-      params.require(:member).permit(:name, :introduction)
+      params.require(:member).permit(:name, :introduction, :birthday)
     end
 
 end

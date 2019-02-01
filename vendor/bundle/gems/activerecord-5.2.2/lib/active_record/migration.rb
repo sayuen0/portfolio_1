@@ -857,6 +857,7 @@ module ActiveRecord
     def method_missing(method, *arguments, &block)
       arg_list = arguments.map(&:inspect) * ", "
 
+
       say_with_time "#{method}(#{arg_list})" do
         unless connection.respond_to? :revert
           unless arguments.empty? || [:execute, :enable_extension, :disable_extension].include?(method)

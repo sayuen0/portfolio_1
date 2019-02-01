@@ -24,10 +24,20 @@
     </td>
   </tr>
   <tr>
-    <th>年齢</th>
-    <td>
-      <%= "#{@member.age}才"%>
-    </td>
+    <th>誕生日</th>
+    <td><%= @member.f_birthday(@member.birthday)%></td>
+  </tr>
+  <tr>
+    <th>得意料理</th>
+    <td><%=@member.bestdish %></td>
+  </tr>
+  <tr>
+    <th>座右の銘</th>
+    <td><%= @member.motto %></td>
+  </tr>
+  <tr>
+    <th>キャッチフレーズ</th>
+    <td><%=@member.catchphrase %></td>
   </tr>
 </table>
 
