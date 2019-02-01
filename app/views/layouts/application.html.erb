@@ -16,17 +16,17 @@
   <%= render "/shared/header"%>
   <% if !flash.empty? %>
   <div class="flash-notion">
-    <%= flash.now[:notice]%>
+    <%= flash[:notice]%>
 
   </div>
   <% end %>
   <div class="container">
     <div class="row">
-      <aside class="col-12 col-md-2 offset-md-1">
+      <aside class="col-12 col-md-3">
         <%= render "shared/aside"%>
       </aside>
 
-      <div class="col-12 col-md-8">
+      <div class="col-12 col-md-9">
         <%= yield %>
       </div>
     </div>

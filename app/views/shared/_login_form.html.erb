@@ -1,0 +1,15 @@
+<h2 class="logo_h">ログイン</h2>
+<% if flash.alert %>
+<p class="alert"><%= flash.alert %></p>
+<% end %>
+
+<%= form_tag :session,  id:"login_form" do  %>
+  <table>
+    <th>メールアドレス</th>
+    <td><input type="email" name="email" id=""></td>
+  </table>
+  <table>
+    <th>パスワード</th>
+    <td><input type="password" name="password" id=""></td>
+  </table><input type="submit" value="ログイン">
+<% end %>

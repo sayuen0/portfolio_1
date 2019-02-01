@@ -2,7 +2,8 @@ class GreetsController < ApplicationController
   PER=8
 
   def hello
-    @members = Member.page(params[:page]).per(PER)
+    # @members = Member.page(params[:page]).per(PER)
+    @members = Member.all
   end
 
 

@@ -1,7 +1,8 @@
 class MembersController < ApplicationController
   PER = 9
   def index
-    @members = Member.order(:created_at).page(params[:page]).per(PER)
+    # @members = Member.order(:created_at).page(params[:page]).per(PER)
+    @members = Member.order(:created_at)
   end
 
   def show
@@ -10,7 +11,6 @@ class MembersController < ApplicationController
 
   def edit
     @member= Member.find(params[:id])
-  
   end
 
   def new
