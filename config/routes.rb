@@ -13,8 +13,5 @@ Rails.application.routes.draw do
 
   resources :members
   resources :questions,:only => [:index, :show]
-<<<<<<< HEAD
   resource :session, only: [:create, :destroy]
-=======
->>>>>>> origin/master
 end
