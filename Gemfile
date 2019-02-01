@@ -20,7 +20,6 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 
-<<<<<<< HEAD
 gem 'faker'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
@@ -30,13 +29,6 @@ gem 'email_validator', '~>1.6'
 gem 'rails-i18n', '~>5.1'
 
 gem 'kaminari', '~> 0.17.0'
-=======
-gem 'bootstrap', '~> 4.1.1'
-gem 'jquery-rails'
-
-gem 'carrierwave'
-
->>>>>>> origin/master
 gem 'rb-readline'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
