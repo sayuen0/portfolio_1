@@ -7,7 +7,6 @@
     <% if @members %>
     <% @members.each do |member| %>
     <%# 各ユーザーアイテムの配置 %>
-<<<<<<< HEAD
     <%= link_to(member, class:"profile_wrapper") do %>
     <%= image_tag "members/profile.jpg", alt: "Member_C"%>
     <%= member.name %>
@@ -15,27 +14,11 @@
       <%= member.introduction.truncate(24) %>
     </p>
     <% end %>
-    <% end %>
-    <% else %>
-    <p>該当メンバーがいません</p>
-=======
-    <div class="profile_wrapper ">
-      <%= image_tag "members/profile.jpg", alt: "Member_C"%>
-      <%= link_to  member.name , member %>
-      <p class="description">
-        <%= member.introduction %>
-      </p>
-    </div>
->>>>>>> origin/master
-    <% end %>
     <% else %>
     <p>該当メンバーがいません</p>
     <% end %>
   </div>
-<<<<<<< HEAD
   <%= paginate @members %>
-=======
->>>>>>> origin/master
 
   <% link_button_div = content_tag("div","メンバーを新規作成する") %>
   <%= link_to link_button_div, :new_member , class: "link" %>
