@@ -16,6 +16,7 @@
   <%= render "/shared/header"%>
   <% if !flash.empty? %>
   <div class="flash-notion">
+<<<<<<< HEAD
     <%= flash.now[:notice]%>
 
   </div>
@@ -31,6 +32,13 @@
       </div>
     </div>
   </div>
+=======
+    <%= flash[:notion]%>
+
+  </div>
+  <% end %>
+  <%= yield %>
+>>>>>>> origin/master
   <%= render "/shared/footer"%>
 </body>
 

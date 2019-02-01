@@ -1,5 +1,6 @@
 ja:
   activerecord:
+<<<<<<< HEAD
     models:
       member: 会員情報
     attributes:
@@ -7,3 +8,9 @@ ja:
         name: "名前"
         introduction: "自己紹介"
         age: "年齢"
+=======
+    attributes:
+      members:
+        name: "名前"
+        introduction: "自己紹介"
+>>>>>>> origin/master

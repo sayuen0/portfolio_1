@@ -1,7 +1,11 @@
 <h1 class="logo_h">
   <%= @page_title%>
 </h1>
+<<<<<<< HEAD
 <%= form_with model: @member ,url: @url ,method: @form_method do |form| %>
+=======
+<%= form_with model: @member ,url: members_path,method: :post do |form| %>
+>>>>>>> origin/master
 <table>
   <tr>
     <th>
@@ -16,6 +20,7 @@
       <%= form.label :introduction%>
     </th>
     <td>
+<<<<<<< HEAD
       <%= form.text_area :introduction, :size => "20x10"%>
     </td>
   </tr>
@@ -31,4 +36,15 @@
   </tr>
  </table>
 
+=======
+      <%= form.text_field :introduction%>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <%=form.submit "新規ユーザーを登録する" %>
+    </td>
+  </tr>
+</table>
+>>>>>>> origin/master
 <% end %>

@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_01_31_153455) do
+=======
+ActiveRecord::Schema.define(version: 2019_01_28_105651) do
+>>>>>>> origin/master
 
   create_table "articles", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -24,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_01_31_153455) do
     t.string "name"
     t.text "introduction"
     t.string "picture"
+<<<<<<< HEAD
     t.string "hometown"
     t.integer "age"
     t.datetime "birthday"
@@ -32,6 +37,8 @@ ActiveRecord::Schema.define(version: 2019_01_31_153455) do
     t.string "bestdish"
     t.string "email"
     t.string "password_digest"
+=======
+>>>>>>> origin/master
   end
 
   create_table "questions", force: :cascade do |t|

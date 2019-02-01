@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 <% @page_title = @member.name+" さんのプロフィール"%>
 <h1>
   <%= @page_title%>
 </h1>
+=======
+>>>>>>> origin/master
 <table>
   <tr>
     <th>名前</th>
@@ -13,7 +16,11 @@
     <th>画像</th>
     <td>
       <div>
+<<<<<<< HEAD
         <%=  @member.picture ? "nil": @member.picture%>
+=======
+        ここに画像追加予定
+>>>>>>> origin/master
       </div>
     </td>
   </tr>
@@ -23,6 +30,7 @@
       <%= @member.introduction%>
     </td>
   </tr>
+<<<<<<< HEAD
   <tr>
     <th>誕生日</th>
     <td><%= @member.f_birthday(@member.birthday)%></td>
@@ -46,3 +54,6 @@
   <%= link_to "削除", :member,method: :delete,   data:{confirm: "メンバーを削除してもよろしいですか？"} %>
 
 </div>
+=======
+</table>
+>>>>>>> origin/master
