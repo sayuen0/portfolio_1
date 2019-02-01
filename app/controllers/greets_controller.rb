@@ -3,7 +3,7 @@ class GreetsController < ApplicationController
 
   def hello
     @members = Member.page(params[:page]).per(PER)
-t   end
+  end
 
 
   def members
