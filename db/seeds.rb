@@ -42,3 +42,14 @@ answers = [
     answer: answers[idx]
     )
 end
+
+
+# POSTS
+genres= ["郷土料理", "中華", "家庭料理", "簡単レシピ", "パーティ料理"]
+5.times do |idx|
+  Post.create(
+          title:Faker::Lorem.sentence(3, true),
+          body:Faker::BackToTheFuture.quote,
+          genre: genres[idx])
+end
+

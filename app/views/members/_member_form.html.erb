@@ -1,7 +1,7 @@
 <h1 class="logo_h">
   <%= @page_title%>
 </h1>
-<%= form_with model: @member,url: @url ,method: @form_method do |form| %>
+<%= form_with model: @member ,method: @form_method do |form| %>
 <table>
   <tr>
     <th>
@@ -25,10 +25,20 @@
                  form.date_select(:birthday, :use_month_numbers=>true, :date_separator => '%s', :start_year=>1930, :end_year => Time.now.year, :default =>'1990-1-1'.to_date), '年','月') + '日生まれ' %></td>
   </tr>
   <tr>
+    <th><%=form.label :password %></th>
+    <td><%=form.password_field :password %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :password_confirmation %></th>
+    <td><%= form.password_field :password_confirmation %></td>
+  </tr>
+  <tr>
     <td colspan="2">
       <%=form.submit @submit_body %>
     </td>
   </tr>
+
+
  </table>
 
 <% end %>

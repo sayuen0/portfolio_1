@@ -33,4 +33,8 @@ table {
     width: 600px;
     border-bottom: 1px solid gray;
   }
+
+  &:last-child{
+    border-bottom: none;
+  }
 }

@@ -20,7 +20,7 @@
     <% end %>
   </div>
 
-  <%#= paginate @members %>
+  <%= paginate @members %>
 
   <% link_button_div = content_tag("div","メンバーを新規作成する") %>
   <%= link_to link_button_div, :new_member , class: "link" %>

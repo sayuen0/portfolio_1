@@ -7,3 +7,8 @@ ja:
         name: "名前"
         introduction: "自己紹介"
         age: "年齢"
+        motto: "座右の銘"
+        birthday: "生年月日"
+        password: "パスワード"
+        password_confirmation: "パスワード(確認)"
+
