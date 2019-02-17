@@ -1,40 +1,40 @@
-/*header*/
-
-#header_form {
-  text-align: center;
-}
-
-/*body*/
-table#table_form {
-  margin-top: 50px;
-  margin-bottom: 100px;
-
-  tr:last-child>td {
-    padding-top: 50px;
-    border-bottom: none;
-  }
-}
-
-th.form-header {
-  &:after {
-    content: "必須";
-    color: red;
-    border: 1px solid red;
-    padding: 0 1em;
-    margin-left: 1em;
-  }
-}
-
-textarea {
-  background-color: linen;
-}
-
-input[type="submit"] {
-  background-color: #ce131d;
-  width: 200px;
-  height: 70px;
-  color: white;
-  box-sizing: border-box;
-  border-radius: 40px;
-  font-weight: lighter;
-}
+///*header*/
+//
+//.question_form#header_form {
+//  text-align: center;
+//}
+//
+///*body*/
+//table#table_form {
+//  margin-top: 50px;
+//  margin-bottom: 100px;
+//
+//  tr:last-child>td {
+//    padding-top: 50px;
+//    border-bottom: none;
+//  }
+//}
+//
+//th.form-header {
+//  &:after {
+//    content: "必須";
+//    color: red;
+//    border: 1px solid red;
+//    padding: 0 1em;
+//    margin-left: 1em;
+//  }
+//}
+//
+//textarea {
+//  background-color: linen;
+//}
+//
+//input[type="submit"] {
+//  background-color: #ce131d;
+//  width: 200px;
+//  height: 70px;
+//  color: white;
+//  box-sizing: border-box;
+//  border-radius: 40px;
+//  font-weight: lighter;
+//}

@@ -1,7 +1,20 @@
 <h1 class="logo_h">
   <%= @page_title%>
 </h1>
-<%= form_with model: @member ,method: @form_method do |form| %>
+<%= form_with(model: member, local: true) do |form| %>
+  <%#= render "layouts/error_messages",model: @member %>
+  <% if member.errors.any? %>
+
+    <div class="alert alert-warning">
+      <ul>
+        <% member.errors.full_messages.each do |m| %>
+          <li><%= m %></li>
+        <% end %>
+      </ul>
+    </div>
+  <%end %>
+
+
 <table>
   <tr>
     <th>
@@ -16,7 +29,7 @@
       <%= form.label :introduction%>
     </th>
     <td>
-      <%= form.text_area :introduction, :size => "20x10"%>
+      <%= form.text_area :introduction, :size => "20x10", placeholder: "空でも可能"%>
     </td>
   </tr>
   <tr>

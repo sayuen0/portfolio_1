@@ -19,14 +19,12 @@ class MembersController < ApplicationController
 
   def create
     @member = Member.new(member_params)
-    binding.pry
+
     if @member.save
       redirect_to action: :index
       flash[:notice] = 'メンバーの新規登録に成功しました。'
     else
-      @member.attributes = member_params
-      redirect_to action: :new
-      flash[:notice]= '新規登録に失敗しました。'
+      render :new
     end
   end
 
@@ -41,13 +39,13 @@ class MembersController < ApplicationController
   def update
     @member= Member.find(params[:id])
     @member.assign_attributes(member_params)
-    # binding.pry
+    
     if @member.save
       redirect_to :member
-      # binding.pry
+      
       flash[:notice] = 'メンバー情報の更新に成功しました。'
     else
-      binding.pry
+      
       @member.attributes  = member_params
       render :edit
       flash[:notice]= 'メンバー情報の更新に失敗しました。'
