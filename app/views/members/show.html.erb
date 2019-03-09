@@ -42,8 +42,11 @@
   </tr>
 </table>
 
+<% if @member==current_member %>
 <div class="attr-links">
   <%= link_to "編集", :edit_member %>
-  <%= link_to "削除", :member,method: :delete,   data:{confirm: "メンバーを削除してもよろしいですか？"} %>
-
+<% end %>
+  <% if current_member.admin==true  %>
+  <%= link_to "削除", :member,method: :delete,   data:{confirm: "メンバー情報を削除してもよろしいですか？"} %>
+  <% end %>
 </div>

@@ -1,4 +1,5 @@
 class MembersController < ApplicationController
+
   PER = 9
   def index
     # @members = Member.order(:created_at).page(params[:page]).per(PER)
@@ -39,13 +40,10 @@ class MembersController < ApplicationController
   def update
     @member= Member.find(params[:id])
     @member.assign_attributes(member_params)
-    
     if @member.save
       redirect_to :member
-      
       flash[:notice] = 'メンバー情報の更新に成功しました。'
     else
-      
       @member.attributes  = member_params
       render :edit
       flash[:notice]= 'メンバー情報の更新に失敗しました。'
@@ -58,5 +56,7 @@ class MembersController < ApplicationController
       params.require(:member).permit(:name, :introduction,:birthday,
                                      :password, :password_confirmation)
     end
+
+
 
 end

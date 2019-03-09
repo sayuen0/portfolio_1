@@ -7,5 +7,10 @@
 <% if !current_member %>
 <%= render "shared/login_form" %>
   <% else %>
+  <p><%="現在のユーザー: "+ current_member.name+"さん" %>
+  </p>
+  <p>
+    <%= link_to "ユーザーページへ", current_member %>
+  </p>
   <%= render "shared/logout_form" %>
 <% end %>

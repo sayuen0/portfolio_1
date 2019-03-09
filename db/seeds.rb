@@ -20,10 +20,14 @@
     bestdish:Faker::Food.dish,
     email: "#{idx}__#{idx}@railssample.com",
     password: "password",
-    password_confirmation: "password"
+    password_confirmation: "password",
+    admin: false
     )
 end
 
+a=Member.first
+a.admin=true
+a.save
 
 
 #QUESTIONS
@@ -45,11 +49,10 @@ end
 
 
 # POSTS
-genres= ["郷土料理", "中華", "家庭料理", "簡単レシピ", "パーティ料理"]
-5.times do |idx|
+genres= ["game", "gourmet", "entertainment"]
+20.times do |idx|
   Post.create(
           title:Faker::Lorem.sentence(3, true),
           body:Faker::BackToTheFuture.quote,
-          genre: genres[idx])
+          genre: genres[idx%3])
 end
-

@@ -2,17 +2,15 @@
 
 <main>
   <h2 class="logo_h">POSTS</h2>
-  <div class="back">
-    <div class="back_mask">
       <ul class="news_list">
         <% @posts.each do |post|%>
           <li class="news_item">
-            <%= image_tag "news/news_icon.jpg" ,alt: "news_icon" , class: "news_image"%>
-            <p class="news_message"><%= post.body %>
-            </p>
+            <%= link_to  post do  %>
+              <%= image_tag "news/news_icon.jpg" ,alt: "news_icon" , class: "news_image"%>
+              <p class="news_message"><%= post.body %>
+              </p>
+            <% end %>
           </li>
         <% end %>
       </ul>
-    </div>
-  </div>
 </main>

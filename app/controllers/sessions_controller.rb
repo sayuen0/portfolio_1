@@ -12,7 +12,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete(:member_id)
-    binding.pry
     redirect_to :root
     flash[:notice]= "ログアウトしました"
   end
